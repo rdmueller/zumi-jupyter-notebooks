@@ -5,5 +5,5 @@ ports:
   onOpen: open-browser
 - port: 8080
   onOpen: notify
-task:
+tasks:
 - command: jupyter notebook jupyter/ --NotebookApp.allow_origin=\'$(gp url 8888)\' --ip='*' --NotebookApp.token='' --NotebookApp.password=''
