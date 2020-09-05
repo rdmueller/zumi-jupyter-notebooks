@@ -6,4 +6,4 @@ ports:
 - port: 8080
   onOpen: notify
 tasks:
-- command: pip3 install opencv-python==4.4.0.42 && jupyter notebook Jupyter/ --NotebookApp.allow_origin=\'$(gp url 8888)\' --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+- init: pip3 install opencv-python==4.4.0.42 opencv-contrib-python && jupyter notebook Jupyter/ --NotebookApp.allow_origin=\'$(gp url 8888)\' --ip='*' --NotebookApp.token='' --NotebookApp.password=''
