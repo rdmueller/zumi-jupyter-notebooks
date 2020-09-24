@@ -1,0 +1,11 @@
+https://github.com/jremmons/pyfakewebcam
+
+https://github.com/umlaeute/v4l2loopback
+
+//sudo apt-get install v4l2loopback-utils
+
+sudo modprobe v4l2loopback video_nr=3 card_label="fakecam"
+
+https://stackoverflow.com/questions/21446292/using-opencv-output-as-webcam
+
+https://github.com/likeablob/rpi-wfh-webcam
