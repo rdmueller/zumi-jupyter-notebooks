@@ -1,1 +1,61 @@
-= TEST
+== Instructions
+
+Date 15. Nov 2022
+
+=== Hardware
+
+Raspberry Pi Zero 2 w
+Waveshare UPS HAT (c)
+
+=== Software
+
+Setup Raspberry Pi Zero 2 W with Bullseye *32*-Bit image (64 Bit does not support camera yet) and setup WiFi.
+SSH into the system or use a Monitor and Keyboard
+
+    sudo apt update
+    sudo apt upgrade
+
+Install PIP
+
+    sudo apt install python3-pip
+
+Install Jupyter Notebook and lab
+
+    sudo apt install python3-matplotlib
+    sudo apt install python3-scipy
+    pip3 install jupyter
+    pip3 install jupyter-lab
+
+Install OpenCV lite: https://www.qengineering.eu/install-opencv-lite-on-raspberry-pi.html
+
+Start jupyter on reboot:
+
+    crontab -e
+
+add the following line
+
+    @reboot /home/pi/.local/bin/jupyter lab --ip=0.0.0.0 --no-browser &
+
+Install aruco for openCV
+
+    pip3 install aruco
+
+== Zumi Architecture
+
+=== Hardware Components
+
+* Raspberry Pi
+* Camera
+* two Servo-Motos with wheels
+* Gyro-Sensor
+* OLED-Display
+* LiPo charging
+* 4x IR distance sensors
+* Arduino for Display Control
+
+=== Software Components
+
+* Jupyter Notebook
+* OpenCV
+* Dashboard
+* WiFi Access-Point
